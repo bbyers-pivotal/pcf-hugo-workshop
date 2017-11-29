@@ -20,7 +20,7 @@ deploy:
         organization: $CF_ORG
         space: $CF_SPACE
         skip_ssl: true
-        appname: pcf-identifix-workshop-blue
-        alt_appname: pcf-identifix-workshop-green
-        domain: app.cloud.rick-ross.com
-        hostname: pcf-identifix-workshop
+        appname: pcf-objectpartners-workshop-blue
+        alt_appname: pcf-objectpartners-workshop-green
+        domain: apps.gcp.pcf.cloud
+        hostname: pcf-objectpartners-workshop

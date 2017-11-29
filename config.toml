@@ -1,4 +1,4 @@
-baseurl = "http://pcf-identifix-workshop.app.cloud.rick-ross.com"
+baseurl = "http://pcf-objectpartners-workshop.apps.gcp.pcf.cloud"
 languageCode = "en-us"
 title = "Cloud Foundry Workshop"
 
@@ -28,9 +28,9 @@ copyright = "© Copyright 2017 Pivotal Software, Inc. All Rights Reserved."
     # Text for the top menu link, which goes the root URL for the site.
     # Default (if omitted) is "Home".
     home = "Home"
-    description = "Identifix · September 6 & 7 9:00 AM - 4:00 PM" # optional
+    description = "Object Partners · December 2 9:00 AM - 4:00 PM" # optional
     twitter = "pivotal" # optional
-    customer = "identifix"
+    customer = "objectpartners"
     # headerCover = "images/headerCover.png" # optional
     # footerCover = "images/footerCover.png" # optional
     googleAnalyticsUserID = "" # optional
