@@ -22,5 +22,5 @@ deploy:
         skip_ssl: true
         appname: pcf-objectpartners-workshop-blue
         alt_appname: pcf-objectpartners-workshop-green
-        domain: apps.gcp.pcf.cloud
+        domain: cfapps.gcp.pcf.cloud
         hostname: pcf-objectpartners-workshop
