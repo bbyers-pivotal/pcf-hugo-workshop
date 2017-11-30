@@ -2,7 +2,7 @@
 
 Categories = ["lab"]
 Tags = ["external-services","microservices","cloudfoundry"]
-date = "2017-08-29T07:49:11-04:00"
+date = "2017-11-29T07:49:11-04:00"
 title = "Lab: Bind to an External Service"
 weight = 5
 
@@ -51,7 +51,7 @@ In this section we will create a backend microservice end point for cities-servi
 
   $ cf create-user-provided-service <YOUR INITIALS>-cities-ws -p "citiesuri"
 
-  citiesuri>   http://<YOUR INIITALS>-cities-service.app.cloud.rick-ross.com/
+  citiesuri>   http://<YOUR INIITALS>-cities-service.cfapps.gcp.pcf.cloud/
 
   Creating user provided service....
   ````
@@ -101,7 +101,7 @@ System-Provided:
    {
     "credentials": {
      "tag": "cities",
-     "uri": "https://rj-cities-service.app.cloud.rick-ross.com/"
+     "uri": "https://bb-cities-service.cfapps.gcp.pcf.cloud/"
     },
     "label": "user-provided",
     "name": "cities-ws",
@@ -114,9 +114,9 @@ System-Provided:
 
 {
  "VCAP_APPLICATION": {
-  "application_name": "rj-cities-ui",
+  "application_name": "bb-cities-ui",
   "application_uris": [
-   "rj-cities-ui.app.cloud.rick-ross.com"
+   "bb-cities-ui.cfapps.gcp.pcf.cloud"
   ],
   "application_version": "dceb111b-3a68-45ad-83fd-3b8b836ebbe7",
   "limits": {
@@ -124,11 +124,11 @@ System-Provided:
    "fds": 16384,
    "mem": 512
   },
-  "name": "rj-cities-ui",
+  "name": "bb-cities-ui",
   "space_id": "56e1d8ef-e87f-4b1c-930b-e7f46c00e483",
   "space_name": "development",
   "uris": [
-   "rj-cities-ui.app.cloud.rick-ross.com"
+   "bb-cities-ui.cfapps.gcp.pcf.cloud"
   ],
   "users": null,
   "version": "dceb111b-3a68-45ad-83fd-3b8b836ebbe7"

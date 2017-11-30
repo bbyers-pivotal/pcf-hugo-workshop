@@ -1,7 +1,7 @@
 +++
 Categories = ["lab"]
 Tags = ["spring","registry-server","cloudfoundry"]
-date = "2016-04-13T00:19:42-04:00"
+date = "2017-11-29T00:19:42-04:00"
 title = "Lab: Spring Cloud Registry Server"
 weight = 91
 
@@ -70,23 +70,23 @@ Clone the git repo which has a simple boilerplate Spring boot app built using Sp
 The Spring Labs repo contains multiple apps, we are going to focus on fortune-service app in this exercise.
 
 ````
-git clone https://github.com/rjain-pivotal/pcf-workshop-spring-labs.git
+git clone https://github.com/bbyers-pivotal/pcf-workshop-spring-labs.git
 ````
 
 
 ### Step 2
 ##### Login into Pivotal Cloud Foundry
 
-The students have userId's (student1-student40) and the passwords will be distributed in the workshop.
-Each student is assigned their own Organization (student1-org)
+The students have userId's (student-xx) and the passwords will be distributed in the workshop.
+Each student is assigned their own Space (student-xx)
 
 ````
-cf login -a https://api.sys.cloud.rick-ross.com --skip-ssl-validation
-  Email: <studentXX>
+cf login -a https://api.sys.gcp.pcf.cloud --skip-ssl-validation
+  Email: <student-XX>
   Password: ••••••••
 ````
 
-Login to the App Console at https://apps.sys.cloud.rick-ross.com
+Login to the App Console at https://apps.sys.gcp.pcf.cloud
 
 <img src="/images/pcf-console.png" alt="PCF App Console" style="width: 100%;"/>
 
@@ -164,7 +164,7 @@ Let's walk through the code in the fortune-service app in the source repo (Step 
           services:
           - <student-XX>-service-registry
           env:
-            TRUST_CERTS: api.sys.cloud.rick-ross.com
+            TRUST_CERTS: api.sys.gcp.pcf.cloud
 
 
 2. Build the app using gradle
@@ -183,7 +183,7 @@ Let's walk through the code in the fortune-service app in the source repo (Step 
    Get the route to your app
 
       ````
-      http://student1-fortune-service.app.cloud.rick-ross.com/
+      http://student1-fortune-service.cfapps.gcp.pcf.cloud/
       ````
 
 ### Step 6
@@ -259,7 +259,7 @@ Lets walk through the code
           services:
           - student-XX-service-registry
           env:
-            TRUST_CERTS: api.sys.cloud.rick-ross.com
+            TRUST_CERTS: api.sys.gcp.pcf.cloud
 
 
 
@@ -282,7 +282,7 @@ Lets walk through the code
       Get the route to your app
 
       ````
-    http://studentXXX-greeting-feign.app.cloud.rick-ross.com/
+    http://studentXXX-greeting-feign.cfapps.gcp.pcf.cloud/
       ````
 
       <img src="/images/pcf-registry-example.png" alt="Service Registry Example" style="width: 100%;"/>

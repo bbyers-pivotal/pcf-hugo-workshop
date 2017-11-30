@@ -2,7 +2,7 @@
 
 Categories = ["lab"]
 Tags = ["building","microservices","cloudfoundry"]
-date = "2017-08-29T07:49:11-04:00"
+date = "2017-11-29T07:49:11-04:00"
 title = "Lab Build and Deploy Apps on PCF"
 weight = 1
 
@@ -22,7 +22,7 @@ Prerequisites
 
     Set the JAVA_HOME variable to the installation dir, in case it is not automatically set
 
-2. Git CLI for [Windows](https://github.com/git-for-windows/git/releases/download/v2.9.0.windows.1/Git-2.9.0-64-bit.exe)
+2. Git CLI for [Windows](https://github.com/git-for-windows/git/releases/download/v2.15.1.windows.1/Git-2.15.1-64-bit.exe)
    or Git from [github.com](https://desktop.github.com)
 
 3. Cloud Foundry CLI for [Mac](https://github.com/cloudfoundry/cli/releases) or [Windows](http://docs.cloudfoundry.org/devguide/installcf/install-go-cli.html#windows)
@@ -35,7 +35,7 @@ Prerequisites
 
 	##### Get the source code repository app
 
-	<img src="/images/git-clone.png" alt="Git style="width: 70%;"/>
+	<img src="/images/git-clone.png" alt="Git" style="width: 70%;"/>
 
 	Download the source code. Download as Zip file and save it in local folder
 
@@ -126,20 +126,12 @@ Windows:
 Each participant will have their own user ids and passwords.  
 
 ````
-cf login -a https://api.sys.cloud.rick-ross.com --skip-ssl-validation
-  Email: myuserid
+cf login -a https://api.sys.gcp.pcf.cloud --skip-ssl-validation
+  Email: student-x
   Password: ••••••••
-
-  Select a space (or press enter to skip):
-  1. development
-  2. test
-  3. production
-
-  Select any one and stick to that space for the rest of the workshop.
-
 ````
 
-Login to the App Console at https://app.cloud.rick-ross.com
+Login to the App Console at https://apps.sys.gcp.pcf.cloud
 
 <img src="/images/pcf-console.png" alt="PCF App Console" style="width: 70%;"/>
 
@@ -157,8 +149,8 @@ Login to the App Console at https://app.cloud.rick-ross.com
     requested state: started
     instances: 1/1
     usage: 512M x 1 instances
-    urls: cities-hello-lactiferous-unanswerableness.sys.cloud.rick-ross.com
-    last uploaded: Mon Jun 15 14:53:10 UTC 2015
+    urls: cities-hello-lactiferous-unanswerableness.cfapps.gcp.pcf.cloud
+    last uploaded: Mon Jun 15 14:53:10 UTC 2017
     stack: cflinuxfs2
     ```
 2. Open the app url
@@ -168,7 +160,7 @@ Login to the App Console at https://app.cloud.rick-ross.com
 
 3. If you haven't already it is a good time to walk through the AppsManager:
 
-        https://app.cloud.rick-ross.com
+        https://apps.sys.gcp.pcf.cloud
 
 4. When you are finished, let's delete the application we just created. In the next labs we will be pushing a diferent application
 
@@ -176,7 +168,7 @@ Login to the App Console at https://app.cloud.rick-ross.com
     cf delete -r <YOUR INITIALS>-cities-hello
     ```
 
-##### Recap: 
+##### Recap:
 
 > Cloud Foundry Haiku </br>
   Here is my source code </br>

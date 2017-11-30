@@ -2,7 +2,7 @@
 
 Categories = ["lab"]
 Tags = ["logging-metrics","microservices","cloudfoundry"]
-date = "2017-08-29T07:49:11-04:00"
+date = "2017-11-29T07:49:11-04:00"
 title = "Lab: Logging and Metrics"
 weight = 3
 
@@ -51,7 +51,7 @@ Another way of viewing the applicaiton logs is using Apps Manager. Navigate to y
 
 Learning about how your application is performing is critical to help you diagnose and troubleshoot potential issues. Cloud Foundry gives you options for viewing the logs.
 
-Open the metrics dashboard at https://metrics.sys.cloud.rick-ross.com/
+Open the metrics dashboard at https://metrics.sys.gcp.pcf.cloud/
 Use you same login id/password as you did to log into PCF.
 
 <img src="/images/pcf-metrics.png" alt="Metrics" style="width: 70%;"/>

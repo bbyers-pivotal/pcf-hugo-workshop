@@ -1,7 +1,7 @@
 +++
 Categories = ["lab"]
 Tags = ["spring","config-server","cloudfoundry"]
-date = "2016-04-11T23:37:14-04:00"
+date = "2017-11-29T23:37:14-04:00"
 title = "Lab: Spring Cloud Config Server"
 weight = 90
 +++
@@ -70,7 +70,7 @@ Clone the git repo which has a simple boilerplate Spring boot app built using Sp
 The Spring Labs repo contains multiple apps, we are going to focus on greeting-config app in this exercise.
 
 ````
-git clone https://github.com/rjain-pivotal/pcf-workshop-spring-labs.git
+git clone https://github.com/bbyers-pivotal/pcf-workshop-spring-labs.git
 ````
 
 
@@ -81,12 +81,12 @@ The participants have userId's and the passwords will be distributed prior to th
 
 
     ````
-    cf login -a https://api.sys.cloud.rick-ross.com --skip-ssl-validation
-    Email: UserID
+    cf login -a https://api.sys.gcp.pcf.cloud --skip-ssl-validation
+    Email: student-x
     Password: ••••••••
     ````
 
-Login to the App Console at https://apps.sys.cloud.rick-ross.com
+Login to the App Console at https://apps.sys.gcp.pcf.cloud
 
     <img src="/images/pcf-console.png" alt="PCF App Console" style="width: 100%;"/>
 
@@ -96,7 +96,7 @@ Login to the App Console at https://apps.sys.cloud.rick-ross.com
 
 The greeting-config app uses the Spring Cloud Services Config Server to read config data.
 
-Fork the repo (http://www.github.com/rjain-pivotal/workshop-app-config)
+Fork the repo (http://www.github.com/bbyers-pivotal/workshop-app-config)
 
 <img src="/images/config-server-fork.png" alt="Fork" style="width: 100%;"/>
 
@@ -163,11 +163,11 @@ https://github.com/myorg/configurations
 
 For Windows
 
-        `cf update-service student1-config-service -c "{\"git\": {\"uri\": \"https://github.com/rjain-pivotal/workshop-app-config.git\"}}"`
+        `cf update-service student1-config-service -c "{\"git\": {\"uri\": \"https://github.com/your-github-account/workshop-app-config.git\"}}"`
 
 For Mac/Linux
 
-        `cf update-service student1-config-service -c '{"git": {"uri": "https://github.com/rjain-pivotal/workshop-app-config.git"}}'`
+        `cf update-service student1-config-service -c '{"git": {"uri": "https://github.com/your-github-account/workshop-app-config.git"}}'`
 
 Note: The Git repository URL is the URL of your cloned git repo in Step 3. If you are using the instructor git url, you can specify that.
 
@@ -287,7 +287,7 @@ Let's walk through the code in the greeting-config app in the source repo (Step 
       greeting:
         displayFortune: true # <----Change to true
 
-      quoteServiceURL: http://quote-service-dev.app.cloud.rick-ross.com/quote
+      quoteServiceURL: http://quote-service-dev.cfapps.gcp.pcf.cloud/quote
       ````
 
 
@@ -308,7 +308,7 @@ Let's walk through the code in the greeting-config app in the source repo (Step 
             - <student-XX>-config-server
           env:
             SPRING_PROFILES_ACTIVE: dev
-            TRUST_CERTS: api.sys.cloud.rick-ross.com
+            TRUST_CERTS: api.sys.gcp.pcf.cloud
 
 
 2. Build the app using gradle
@@ -326,8 +326,8 @@ Let's walk through the code in the greeting-config app in the source repo (Step 
 4. Open in the browser the App
 
       ````
-      http://<student-XX>-greeting-config.app.cloud.rick-ross.com/
-      http://<student-XX>-greeting-config.app.cloud.rick-ross.com/random-quote
+      http://<student-XX>-greeting-config.cfapps.gcp.pcf.cloud/
+      http://<student-XX>-greeting-config.cfapps.gcp.pcf.cloud/random-quote
       ````
 
 ### Step 7
@@ -339,13 +339,13 @@ Let's walk through the code in the greeting-config app in the source repo (Step 
       greeting:
         displayFortune: false # <----Change to true
 
-      quoteServiceURL: http://quote-service-qa.app.cloud.rick-ross.com/quote
+      quoteServiceURL: http://quote-service-qa.cfapps.gcp.pcf.cloud/quote
       ````
 
 2. Force refresh the beans
 
       ````
-      curl -X POST http://<student-XX>-greeting-config.app.cloud.rick-ross.com/refresh
+      curl -X POST http://<student-XX>-greeting-config.cfapps.gcp.pcf.cloud/refresh
       ````
 
       This will output the properties which changed
@@ -357,8 +357,8 @@ Let's walk through the code in the greeting-config app in the source repo (Step 
 
       You will see the Greetings doesn't have any fortune and the random-quote is from qa service
 
-        http://<student-XX>-greeting-config.app.cloud.rick-ross.com/
-        http://<student-XX>-greeting-config.app.cloud.rick-ross.com/random-quote
+        http://<student-XX>-greeting-config.cfapps.gcp.pcf.cloud/
+        http://<student-XX>-greeting-config.cfapps.gcp.pcf.cloud/random-quote
 
 
 ### Step 8
@@ -390,8 +390,8 @@ Let's walk through the code in the greeting-config app in the source repo (Step 
 
       You can verify by opening the two URLs
 
-        http://<student-XX>-greeting-config.app.cloud.rick-ross.com/
-        http://<student-XX>-greeting-config.app.cloud.rick-ross.com/random-quote
+        http://<student-XX>-greeting-config.cfapps.gcp.pcf.cloud/
+        http://<student-XX>-greeting-config.cfapps.gcp.pcf.cloud/random-quote
 
 
 ### Step 9
@@ -430,44 +430,44 @@ Spring Cloud Bus addresses the issues listed above by providing a single endpoin
 4. Change the app-config/greeting-config.yml and refresh all the app instances using Cloud Bus
 
       ````
-      curl -X POST http://<studentXXX>-greeting-config.app.cloud.rick-ross.com/bus/refresh
+      curl -X POST http://<studentXXX>-greeting-config.cfapps.gcp.pcf.cloud/bus/refresh
       ````
 
 5. Verify by opening the two URLs
 
-        http://<studentXXX>-greeting-config.app.cloud.rick-ross.com/
-        http://<studentXXX>-greeting-config.app.cloud.rick-ross.com/random-quote
+        http://<studentXXX>-greeting-config.cfapps.gcp.pcf.cloud/
+        http://<studentXXX>-greeting-config.cfapps.gcp.pcf.cloud/random-quote
 
 ### Step 10
 ##### Spring Actuator Endpoints
 
 Check the Actuator Endpoints
 
-``http://<YOUR INITIALS>-greeting-config.app.cloud.rick-ross.com/beans``
+``http://<YOUR INITIALS>-greeting-config.cfapps.gcp.pcf.cloud/beans``
 
 Dumps all of the beans in the Spring context.
 
-``http://<YOUR INITIALS>-greeting-config.app.cloud.rick-ross.com/autoconfig``
+``http://<YOUR INITIALS>-greeting-config.cfapps.gcp.pcf.cloud/autoconfig``
 
 Dumps all of the auto-configuration performed as part of application bootstrapping.
 
-``http://<YOUR INITIALS>-greeting-config.app.cloud.rick-ross.com/configprops``
+``http://<YOUR INITIALS>-greeting-config.cfapps.gcp.pcf.cloud/configprops``
 
 Displays a collated list of all @ConfigurationProperties.
 
-``http://<YOUR INITIALS>-greeting-config.app.cloud.rick-ross.com/env``
+``http://<YOUR INITIALS>-greeting-config.cfapps.gcp.pcf.cloud/env``
 
 Dumps the application’s shell environment as well as all Java system properties.
 
-``http://<YOUR INITIALS>-greeting-config.app.cloud.rick-ross.com/mappings``
+``http://<YOUR INITIALS>-greeting-config.cfapps.gcp.pcf.cloud/mappings``
 
 Dumps all URI request mappings and the controller methods to which they are mapped.
 
-``http://<YOUR INITIALS>-greeting-config.app.cloud.rick-ross.com/dump``
+``http://<YOUR INITIALS>-greeting-config.cfapps.gcp.pcf.cloud/dump``
 
 Performs a thread dump.
 
-``http://<YOUR INITIALS>-greeting-config.app.cloud.rick-ross.com/trace``
+``http://<YOUR INITIALS>-greeting-config.cfapps.gcp.pcf.cloud/trace``
 
 # Advanced Topics
 
@@ -488,10 +488,10 @@ And to get the encrypted values, first get the OAuth TOKEN_STRING
           "p-config-server": [
            {
             "credentials": {
-             "access_token_uri": "https://p-spring-cloud-services.uaa.sys.cloud.rick-ross.com/oauth/token",
+             "access_token_uri": "https://p-spring-cloud-services.uaa.sys.gcp.pcf.cloud/oauth/token",
              "client_id": "p-config-server-876cd13b-1564-4a9a-9d44-c7c8a6257b73",
              "client_secret": "rU7dMUw6bQjR",
-             "uri": "https://config-86b38ce0-eed8-4c01-adb4-1a651a6178e2.apps.wise.com"
+             "uri": "https://config-86b38ce0-eed8-4c01-adb4-1a651a6178e2.cfapps.gcp.pcf.cloud"
             },
         [...]
 

@@ -1,9 +1,9 @@
 +++
 Categories = ["lab"]
 Tags = ["docker","cloudfoundry"]
-date = "2016-03-15T14:54:22-04:00"
+date = "2017-11-29T14:54:22-04:00"
 title = "Lab: Run Docker Containers in Cloud Foundry"
-weight = 100
+weight = 1000
 
 +++
 
@@ -62,7 +62,7 @@ The Spring boot app is deployed in Cloud Foundry as a Docker Container
       $docker images
       # Get the Docker Machine VM IP if running on a MAC
       $docker-machine env default (Get the Machine IP)
-      $docker run -p 8080:8080 -t rjain15/gs-spring-boot-docker
+      $docker run -p 8080:8080 -t <docker-user>/gs-spring-boot-docker
       $curl http://192.168.99.100:8080  (Use the Machine IP)
    ```
 

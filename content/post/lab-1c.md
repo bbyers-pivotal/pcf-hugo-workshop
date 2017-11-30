@@ -2,7 +2,7 @@
 
 Categories = ["lab"]
 Tags = ["scaling","microservices","cloudfoundry"]
-date = "2017-08-29T07:49:11-04:00"
+date = "2017-11-29T07:49:11-04:00"
 title = "Lab: Scale an Application"
 weight = 4
 
@@ -32,7 +32,7 @@ Lets vertically scale the application to 1 GB of RAM.
 
 
 ### Step 2
-##### Scale the Applicaiton in the Console
+##### Scale the Application in the Console
 
 Now scale your application down to 512 MB.
 
@@ -61,15 +61,15 @@ You can also use the Autoscaler service from the marketplace and bind it to your
 To verify that the application is running, use the following curl commands (or use your browser) to retrieve data from the service or use a browser to access the URL:
 
   ````bash
-  $ curl -i -k https://<YOUR INITIALS>-cities-service.app.cloud.rick-ross.com/cities
+  $ curl -i -k https://<YOUR INITIALS>-cities-service.cfapps.gcp.pcf.cloud/cities
   ````
 
   ````bash
-  $ curl -i -k https://<YOUR INITIALS>-cities-service.app.cloud.rick-ross.com/cities/49
+  $ curl -i -k https://<YOUR INITIALS>-cities-service.cfapps.gcp.pcf.cloud/cities/49
   ````
 
   ````bash
-  $ curl -i -k https://<YOUR INITIALS>-cities-service.app.cloud.rick-ross.com/cities?size=5
+  $ curl -i -k https://<YOUR INITIALS>-cities-service.cfapps.gcp.pcf.cloud/cities?size=5
   ````
 
   For Windows, use your browser and visit the corresponding URLs.

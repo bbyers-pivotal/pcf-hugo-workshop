@@ -2,7 +2,7 @@
 
 Categories = ["lab"]
 Tags = ["services","microservices","cloudfoundry"]
-date = "2017-08-29T07:49:11-04:00"
+date = "2017-11-29T07:49:11-04:00"
 title = "Lab: Binding to Services"
 weight = 2
 
@@ -33,7 +33,7 @@ In ths Lab you will deploy a new application that requires a MySQL database. You
 
 2. Create a mysql service, name it as `<YOUR INITIALS>-cities-db`
 
-    You can create the service from the `cli` or launch the App Manager-> Select the Development Space [https://apps.sys.cloud.rick-ross.com](https://apps.sys.cloud.rick-ross.com) and login.
+    You can create the service from the `cli` or launch the App Manager-> Select the Development Space [https://apps.sys.gcp.pcf.cloud](https://apps.sys.gcp.pcf.cloud) and login.
     Navigate to the marketplace and see the available services.
 
     <img src="/images/pcf-marketplace.png" alt="Marketplace Services" style="width: 70%;"/>
@@ -138,16 +138,16 @@ Next, lets push the cities-service app with a manifest to help automate deployme
     ````bash
        // This will list your apps and the last column is the route.
        $ cf apps
-          url: instructor-cities-service.sys.cloud.rick-ross.com  
+          url: instructor-cities-service.cfapps.gcp.pcf.cloud  
           // Note - Use HTTPS
-       $ curl -i -k https://instructor-cities-service.sys.cloud.rick-ross.com
+       $ curl -i -k https://instructor-cities-service.cfapps.gcp.pcf.cloud
     ````
 
     For Windows
     ````
-       Open the URL (e.g. https://instructor-cities-service.sys.cloud.rick-ross.com) in a browser window
+       Open the URL (e.g. https://instructor-cities-service.cfapps.gcp.pcf.cloud) in a browser window
     ````
-    We must be able to access your application at https://instructor-cities-service.sys.cloud.rick-ross.com for the next steps to work properly.
+    We must be able to access your application at https://instructor-cities-service.cfapps.gcp.pcf.cloud for the next steps to work properly.
 
 __NOTE__
 
@@ -166,7 +166,7 @@ What happens when you bind your microservice to a backing service? It creates an
 
 You will get the output similar to this on your terminal
   ````bash
-  Getting env variables for app rj-cities-service in org Central / space development as rajesh.jain@pivotal.io...
+  Getting env variables for app bb-cities-service in org Central / space development as bbyers@pivotal.io...
   OK
 
   System-Provided:
@@ -201,9 +201,9 @@ You will get the output similar to this on your terminal
 
   {
    "VCAP_APPLICATION": {
-    "application_name": "rj-cities-service",
+    "application_name": "bb-cities-service",
     "application_uris": [
-     "rj-cities-service.app.cloud.rick-ross.com"
+     "bb-cities-service.cfapps.gcp.pcf.cloud"
     ],
     "application_version": "c3c35527-424f-4dbc-a4ea-115e1250cc5d",
     "limits": {
@@ -211,11 +211,11 @@ You will get the output similar to this on your terminal
      "fds": 16384,
      "mem": 512
     },
-    "name": "rj-cities-service",
+    "name": "bb-cities-service",
     "space_id": "56e1d8ef-e87f-4b1c-930b-e7f46c00e483",
     "space_name": "development",
     "uris": [
-     "rj-cities-service.app.cloud.rick-ross.com"
+     "bb-cities-service.cfapps.gcp.pcf.cloud"
     ],
     "users": null,
     "version": "c3c35527-424f-4dbc-a4ea-115e1250cc5d"
@@ -230,9 +230,9 @@ You will get the output similar to this on your terminal
   No staging env variables have been set
   ````
 
-##### Discussion 
+##### Discussion
 
-* How do you provision services today? 
+* How do you provision services today?
 * How long does it take to get access to those services?
 * What mechanisms do you use today to provide the connection information to the service?
 ***
