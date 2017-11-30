@@ -62,13 +62,13 @@ Learn how to
 ### Step 1
 ##### Download Fly and Target Concourse CI Server in Google
 
-The Concourse Server in Google is already configured from an existing AMI for this workshop.
+The Concourse Server in Google is already configured from an existing Concourse installation for this workshop.
 
    Open a browser window and launch ***https://ci.google.pcf.cloud/***
 
    The userid/password for this server is
    ```
-      userid: pivotal
+      userid: student-XX
       password: <distributed in the workshop>
    ```
 
@@ -84,7 +84,7 @@ Open a cmd/terminal and target the concourse server.
 
 We will call our Concourse CI Server as *```gcp```*
 
-    $ fly -t gcp login -c https://ci.google.pcf.cloud -k
+    $ fly -t gcp login -c https://ci.google.pcf.cloud -k -n student-XX
 
     Use the same userid / password combination.
 
@@ -328,8 +328,7 @@ $ fly -t gcp destroy-pipeline -p student-XX-flight-school // This will DELETE th
 
     Open a browser and check the app load. (https://student-XX-pcf-ers-demo-dev.cfapps.gcp.pcf.cloud)
 
-    <img src="/images/concourse-10.png" alt="Concourse CI" style="width: 100%;"/>
-
+  
 
 ## Part 3: Optional Installing Concourse Locally
 

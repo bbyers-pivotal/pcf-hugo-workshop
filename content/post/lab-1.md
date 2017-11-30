@@ -50,7 +50,7 @@ Prerequisites
 
 	For Linux/Mac:
 	```bash
-	$git clone https://github.com/Pivotal-Field-Engineering/pcf-workspace-devops.git
+	$ git clone https://github.com/Pivotal-Field-Engineering/pcf-workspace-devops.git
 	```
 
 	For Windows

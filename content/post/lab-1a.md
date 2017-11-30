@@ -184,7 +184,7 @@ You will get the output similar to this on your terminal
        "username": "xxxx"
       },
       "label": "cleardb",
-      "name": "rj-cities-db",
+      "name": "bb-cities-db",
       "plan": "spark",
       "tags": [
        "Data Stores",

@@ -4,8 +4,9 @@ title = "Cloud Foundry Workshop"
 
 
 
-#theme="hyde-y"
+# theme="hyde-y"
 theme="material-design"
+# theme="hugo-bootstrap"
 MetaDataFormat = "toml"
 paginate = 21 # To specify a multiple of 3
 disqusShortname = "" # optional
