@@ -3,7 +3,7 @@
 Categories = ["lab"]
 Tags = ["services","microservices","cloudfoundry"]
 date = "2017-11-29T07:49:11-04:00"
-title = "Lab: Binding to Services"
+title = "Lab 2: Binding to Services"
 weight = 2
 
 +++

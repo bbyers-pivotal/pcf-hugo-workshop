@@ -3,7 +3,7 @@
 Categories = ["lab"]
 Tags = ["blue-green","microservices","cloudfoundry"]
 date = "2017-11-29T07:49:11-04:00"
-title = "Lab: Blue Green Deployments"
+title = "Lab 6: Blue Green Deployments"
 weight = 6
 
 +++

@@ -2,8 +2,8 @@
 Categories = ["lab"]
 Tags = ["spring","registry-server","cloudfoundry"]
 date = "2017-11-29T00:19:42-04:00"
-title = "Lab: Spring Cloud Registry Server"
-weight = 91
+title = "Lab 8: Spring Cloud Registry Server"
+weight = 8
 
 +++
 

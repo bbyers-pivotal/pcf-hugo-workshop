@@ -2,7 +2,7 @@
 Categories = ["lab"]
 Tags = ["concourse", "pipeline"]
 date = "2017-11-29T12:08:22-04:00"
-title = "Lab: Build Pipelines using Concourse.ci"
+title = "Lab 10: Build Pipelines using Concourse.ci"
 weight = 10
 +++
 
