@@ -3,8 +3,8 @@
 Categories = ["lab"]
 Tags = ["scaling","microservices","cloudfoundry"]
 date = "2017-11-29T07:49:11-04:00"
-title = "Lab 4: Scale an Application"
-weight = 4
+title = "Lab 5: Scale an Application"
+weight = 5
 
 +++
 

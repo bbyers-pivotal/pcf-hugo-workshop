@@ -3,8 +3,8 @@
 Categories = ["lab"]
 Tags = ["external-services","microservices","cloudfoundry"]
 date = "2017-11-29T07:49:11-04:00"
-title = "Lab 5: Bind to an External Service"
-weight = 5
+title = "Lab 3: Bind to an External Service"
+weight = 3
 
 +++
 
