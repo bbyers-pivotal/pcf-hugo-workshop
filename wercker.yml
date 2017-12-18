@@ -20,7 +20,7 @@ deploy:
         organization: $CF_ORG
         space: $CF_SPACE
         skip_ssl: true
-        appname: pcf-objectpartners-workshop-blue
-        alt_appname: pcf-objectpartners-workshop-green
-        domain: cfapps.gcp.pcf.cloud
-        hostname: pcf-objectpartners-workshop
+        appname: pcf-workshop-blue
+        alt_appname: pcf-workshop-green
+        domain: apps.pcf.cloud
+        hostname: pcf-workshop
