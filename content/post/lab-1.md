@@ -149,7 +149,7 @@ Login to the App Console at https://apps.run.pcf.cloud
     requested state: started
     instances: 1/1
     usage: 512M x 1 instances
-    urls: cities-hello-lactiferous-unanswerableness.cfapps.gcp.pcf.cloud
+    urls: cities-hello-lactiferous-unanswerableness.apps.pcf.cloud
     last uploaded: Mon Jun 15 14:53:10 UTC 2017
     stack: cflinuxfs2
     ```

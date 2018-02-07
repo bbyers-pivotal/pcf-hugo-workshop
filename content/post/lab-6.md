@@ -326,7 +326,7 @@ $ fly -t gcp destroy-pipeline -p student-XX-flight-school // This will DELETE th
     cf apps // Get the App Names and URL
     ````
 
-    Open a browser and check the app load. (https://student-XX-pcf-ers-demo-dev.cfapps.gcp.pcf.cloud)
+    Open a browser and check the app load. (https://student-XX-pcf-ers-demo-dev.apps.pcf.cloud)
 
   
 

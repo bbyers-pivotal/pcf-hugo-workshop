@@ -138,16 +138,16 @@ Next, lets push the cities-service app with a manifest to help automate deployme
     ````bash
        // This will list your apps and the last column is the route.
        $ cf apps
-          url: instructor-cities-service.cfapps.gcp.pcf.cloud  
+          url: instructor-cities-service.apps.pcf.cloud  
           // Note - Use HTTPS
-       $ curl -i -k https://instructor-cities-service.cfapps.gcp.pcf.cloud
+       $ curl -i -k https://instructor-cities-service.apps.pcf.cloud
     ````
 
     For Windows
     ````
-       Open the URL (e.g. https://instructor-cities-service.cfapps.gcp.pcf.cloud) in a browser window
+       Open the URL (e.g. https://instructor-cities-service.apps.pcf.cloud) in a browser window
     ````
-    We must be able to access your application at https://instructor-cities-service.cfapps.gcp.pcf.cloud for the next steps to work properly.
+    We must be able to access your application at https://instructor-cities-service.apps.pcf.cloud for the next steps to work properly.
 
 __NOTE__
 
@@ -203,7 +203,7 @@ You will get the output similar to this on your terminal
    "VCAP_APPLICATION": {
     "application_name": "bb-cities-service",
     "application_uris": [
-     "bb-cities-service.cfapps.gcp.pcf.cloud"
+     "bb-cities-service.apps.pcf.cloud"
     ],
     "application_version": "c3c35527-424f-4dbc-a4ea-115e1250cc5d",
     "limits": {
@@ -215,7 +215,7 @@ You will get the output similar to this on your terminal
     "space_id": "56e1d8ef-e87f-4b1c-930b-e7f46c00e483",
     "space_name": "development",
     "uris": [
-     "bb-cities-service.cfapps.gcp.pcf.cloud"
+     "bb-cities-service.apps.pcf.cloud"
     ],
     "users": null,
     "version": "c3c35527-424f-4dbc-a4ea-115e1250cc5d"
