@@ -29,9 +29,9 @@ copyright = "© Copyright 2017 Pivotal Software, Inc. All Rights Reserved."
     # Text for the top menu link, which goes the root URL for the site.
     # Default (if omitted) is "Home".
     home = "Home"
-    description = "Object Partners · December 2 9:00 AM - 4:00 PM" # optional
+    description = "West Corp · February 7 12:00 PM - 3:00 PM" # optional
     twitter = "pivotal" # optional
-    customer = "objectpartners"
+    customer = "west"
     # headerCover = "images/headerCover.png" # optional
     # footerCover = "images/footerCover.png" # optional
     googleAnalyticsUserID = "" # optional
