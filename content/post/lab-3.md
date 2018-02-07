@@ -81,12 +81,12 @@ The participants have userId's and the passwords will be distributed prior to th
 
 
     ````
-    cf login -a https://api.sys.gcp.pcf.cloud --skip-ssl-validation
+    cf login -a https://api.run.pcf.cloud --skip-ssl-validation
     Email: student-x
     Password: ••••••••
     ````
 
-Login to the App Console at https://apps.sys.gcp.pcf.cloud
+Login to the App Console at https://apps.run.pcf.cloud
 
     <img src="/images/pcf-console.png" alt="PCF App Console" style="width: 100%;"/>
 
@@ -308,7 +308,7 @@ Let's walk through the code in the greeting-config app in the source repo (Step 
             - <student-XX>-config-server
           env:
             SPRING_PROFILES_ACTIVE: dev
-            TRUST_CERTS: api.sys.gcp.pcf.cloud
+            TRUST_CERTS: api.run.pcf.cloud
 
 
 2. Build the app using gradle
@@ -488,7 +488,7 @@ And to get the encrypted values, first get the OAuth TOKEN_STRING
           "p-config-server": [
            {
             "credentials": {
-             "access_token_uri": "https://p-spring-cloud-services.uaa.sys.gcp.pcf.cloud/oauth/token",
+             "access_token_uri": "https://p-spring-cloud-services.uaa.run.pcf.cloud/oauth/token",
              "client_id": "p-config-server-876cd13b-1564-4a9a-9d44-c7c8a6257b73",
              "client_secret": "rU7dMUw6bQjR",
              "uri": "https://config-86b38ce0-eed8-4c01-adb4-1a651a6178e2.cfapps.gcp.pcf.cloud"

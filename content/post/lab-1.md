@@ -126,12 +126,12 @@ Windows:
 Each participant will have their own user ids and passwords.  
 
 ````
-cf login -a https://api.sys.gcp.pcf.cloud --skip-ssl-validation
+cf login -a https://api.run.pcf.cloud --skip-ssl-validation
   Email: student-x
   Password: ••••••••
 ````
 
-Login to the App Console at https://apps.sys.gcp.pcf.cloud
+Login to the App Console at https://apps.run.pcf.cloud
 
 <img src="/images/pcf-console.png" alt="PCF App Console" style="width: 70%;"/>
 
@@ -160,7 +160,7 @@ Login to the App Console at https://apps.sys.gcp.pcf.cloud
 
 3. If you haven't already it is a good time to walk through the AppsManager:
 
-        https://apps.sys.gcp.pcf.cloud
+        https://apps.run.pcf.cloud
 
 4. When you are finished, let's delete the application we just created. In the next labs we will be pushing a diferent application
 

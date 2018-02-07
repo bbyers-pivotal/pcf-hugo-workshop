@@ -70,7 +70,7 @@ Clone the git repo which has a simple boilerplate Spring boot app built using Sp
 The Spring Labs repo contains multiple apps, we are going to focus on traveler app in this exercise.
 
 ````
-git clone https://github.com/rjain-pivotal/pcf-workshop-spring-labs.git
+git clone https://github.com/bbyers-pivotal/pcf-workshop-spring-labs.git
 ````
 
 ### Step 2
@@ -80,12 +80,12 @@ The students have userId's (student1-student25) and the passwords will be distri
 Each student is assigned their own Organization (student1-org)
 
 ````
-cf login -a https://api.sys.gcp.pcf.cloud --skip-ssl-validation
+cf login -a https://api.run.pcf.cloud --skip-ssl-validation
   Email: <studentXX>
   Password: ••••••••
 ````
 
-Login to the App Console at https://apps.sys.gcp.pcf.cloud
+Login to the App Console at https://apps.run.pcf.cloud
 
   <img src="/images/pcf-console.png" alt="PCF App Console" style="width: 100%;"/>
 
@@ -116,7 +116,7 @@ Let's walk through the code in the traveler app in the source repo (Step #1) usi
 
 1. Review the *traveler/feign-agency/src/main/java/agency/AgencyApplication.java* file.
 
-      To work with a Circuit Breaker Dashboard instance, your application must include the `@EnableCircuitBreaker` annotation on a configuration class. This client application also using service registry to discover the Company service and Feign to build the interace for accessing the services
+      To work with a Circuit Breaker Dashboard instance, your application must include the `@EnableCircuitBreaker` annotation on a configuration class. This client application also using service registry to discover the Company service and Feign to build the interface for accessing the services
 
       ````
       import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -184,7 +184,7 @@ For more details, refer to the documentation of the Circuit Breaker configuratio
             path: ./build/libs/company-0.0.1-SNAPSHOT.jar
             env:
               SPRING_PROFILES_ACTIVE: dev
-              TRUST_CERTS: api.sys.gcp.pcf.cloud
+              TRUST_CERTS: api.run.pcf.cloud
 
 
 
@@ -201,7 +201,7 @@ For more details, refer to the documentation of the Circuit Breaker configuratio
             path: ./build/libs/agency-0.0.1-SNAPSHOT.jar
             env:
               SPRING_PROFILES_ACTIVE: dev
-              TRUST_CERTS: api.sys.gcp.pcf.cloud
+              TRUST_CERTS: api.run.pcf.cloud
 
 
 
@@ -241,10 +241,10 @@ For more details, refer to the documentation of the Circuit Breaker configuratio
 
       ````
       // This is the agency app
-      http://<studentXX>-agency.cfapps.gcp.pcf.cloud/
+      http://<studentXX>-agency.apps.pcf.cloud/
 
       // Note this is the company app
-      http://<studentXX>-company.cfapps.gcp.pcf.cloud/available
+      http://<studentXX>-company.apps.pcf.cloud/available
       ````
 
 6.  Check the Hysterix Dashboard from the App Console -> Manage Hysterix Service instance
@@ -265,7 +265,7 @@ For more details, refer to the documentation of the Circuit Breaker configuratio
 
       Now check the app status, the agency app will fall back to the backup.
 
-        http://<studentXX>-agency.cfapps.gcp.pcf.cloud/
+        http://<studentXX>-agency.apps.pcf.cloud/
 
         Your guide will be: None available! Your backup guide is: Cookie
 
@@ -278,7 +278,7 @@ For more details, refer to the documentation of the Circuit Breaker configuratio
 
       Load the circuit
 
-        while true; do curl http://<studentXX>-agency.cfapps.gcp.pcf.cloud/; done
+        while true; do curl http://<studentXX>-agency.apps.pcf.cloud/; done
 
 
 3. When failures exceed the configured threshold (the default is 20 failures in 5 seconds), the breaker opens the circuit.

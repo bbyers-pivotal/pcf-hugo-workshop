@@ -81,12 +81,12 @@ The students have userId's (student-xx) and the passwords will be distributed in
 Each student is assigned their own Space (student-xx)
 
 ````
-cf login -a https://api.sys.gcp.pcf.cloud --skip-ssl-validation
+cf login -a https://api.run.pcf.cloud --skip-ssl-validation
   Email: <student-XX>
   Password: ••••••••
 ````
 
-Login to the App Console at https://apps.sys.gcp.pcf.cloud
+Login to the App Console at https://apps.run.pcf.cloud
 
 <img src="/images/pcf-console.png" alt="PCF App Console" style="width: 100%;"/>
 
@@ -164,7 +164,7 @@ Let's walk through the code in the fortune-service app in the source repo (Step 
           services:
           - <student-XX>-service-registry
           env:
-            TRUST_CERTS: api.sys.gcp.pcf.cloud
+            TRUST_CERTS: api.run.pcf.cloud
 
 
 2. Build the app using gradle
@@ -183,7 +183,7 @@ Let's walk through the code in the fortune-service app in the source repo (Step 
    Get the route to your app
 
       ````
-      http://student1-fortune-service.cfapps.gcp.pcf.cloud/
+      http://student1-fortune-service.apps.pcf.cloud.pcf.cloud/
       ````
 
 ### Step 6
@@ -259,7 +259,7 @@ Lets walk through the code
           services:
           - student-XX-service-registry
           env:
-            TRUST_CERTS: api.sys.gcp.pcf.cloud
+            TRUST_CERTS: api.run.pcf.cloud
 
 
 
@@ -282,7 +282,7 @@ Lets walk through the code
       Get the route to your app
 
       ````
-    http://studentXXX-greeting-feign.cfapps.gcp.pcf.cloud/
+    http://studentXXX-greeting-feign.apps.pcf.cloud.pcf.cloud/
       ````
 
       <img src="/images/pcf-registry-example.png" alt="Service Registry Example" style="width: 100%;"/>

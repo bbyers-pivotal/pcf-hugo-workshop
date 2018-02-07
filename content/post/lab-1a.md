@@ -10,7 +10,7 @@ weight = 2
 
 ### Goal
 
-To demonostrate how to provision and bind services that a microservice can use.
+To demonstrate how to provision and bind services that a microservice can use.
 
 <!--more-->
 
@@ -33,7 +33,7 @@ In ths Lab you will deploy a new application that requires a MySQL database. You
 
 2. Create a mysql service, name it as `<YOUR INITIALS>-cities-db`
 
-    You can create the service from the `cli` or launch the App Manager-> Select the Development Space [https://apps.sys.gcp.pcf.cloud](https://apps.sys.gcp.pcf.cloud) and login.
+    You can create the service from the `cli` or launch the App Manager-> Select the Development Space [https://apps.run.pcf.cloud](https://apps.run.pcf.cloud) and login.
     Navigate to the marketplace and see the available services.
 
     <img src="/images/pcf-marketplace.png" alt="Marketplace Services" style="width: 70%;"/>
