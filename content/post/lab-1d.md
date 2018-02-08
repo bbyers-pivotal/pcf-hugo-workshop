@@ -71,7 +71,7 @@ A `manifest.yml` is included in the cities-ui app.  Edit this manifest with your
   ---
   applications:
   - name: <YOUR INITIALS>-cities-ui
-    memory: 512M
+    memory: 1G
     instances: 1
     path: build/libs/cities-ui.jar
     services: [ <YOUR INITIALS>-cities-ws ]

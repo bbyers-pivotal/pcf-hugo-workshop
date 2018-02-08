@@ -369,7 +369,7 @@ Let's walk through the code in the greeting-config app in the source repo (Step 
         ---
         applications:
         - name: <studentXXX>-greeting-config
-          memory: 512M
+          memory: 1G
           buildpack: https://github.com/cloudfoundry/java-buildpack
           instances: 1
           host: <studentXXX>-greeting-config

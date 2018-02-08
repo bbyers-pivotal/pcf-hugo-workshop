@@ -197,7 +197,7 @@ For more details, refer to the documentation of the Circuit Breaker configuratio
             host: <student-XX>-agency
             services:
               - <student-XX>-service-registry
-              - <student-XX>-circuit-breaker
+              - <student-XX>-circuit-breaker-dashboard
             path: ./build/libs/agency-0.0.1-SNAPSHOT.jar
             env:
               SPRING_PROFILES_ACTIVE: dev
@@ -219,7 +219,7 @@ For more details, refer to the documentation of the Circuit Breaker configuratio
 
       ````
       cf create-service p-service-registry standard service-registry
-      cf create-service p-circuit-breaker-dashboard standard circuit-breaker
+      cf create-service p-circuit-breaker-dashboard standard circuit-breaker-dashboard
       sleep 120
       pushd company && cf push -p build/libs/company-0.0.1-SNAPSHOT.jar
       popd; sleep 30

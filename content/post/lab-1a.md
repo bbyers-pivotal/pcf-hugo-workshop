@@ -54,7 +54,7 @@ In ths Lab you will deploy a new application that requires a MySQL database. You
 
     ````bash
     $ cd ../cities-service  (on Windows cd ..\cities-service)
-    $ cf push <YOUR INITIALS>-cities-service -i 1 -m 512M -p build/libs/cities-service.jar
+    $ cf push <YOUR INITIALS>-cities-service -i 1 -m 1G -p build/libs/cities-service.jar
     ````
 2. Check the logs to learn more about why the application is not starting.
     You can look at the recent logs from the cli or open up the App Console and view the log files for the app.
