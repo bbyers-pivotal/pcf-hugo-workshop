@@ -37,7 +37,9 @@ Prerequisites
 
 5. Fly cli. The fly tool is a command line interface to Concourse, it available when you bring up Concourse
 
-6. Github Personal Access Token
+6. Github Personal Access Token (https://github.com/settings/tokens)
+
+7. SSH Key Private/Public [Generate Key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
 
 
 
