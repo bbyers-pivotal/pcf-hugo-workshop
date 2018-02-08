@@ -183,7 +183,7 @@ Let's walk through the code in the fortune-service app in the source repo (Step 
    Get the route to your app
 
       ````
-      http://student1-fortune-service.apps.pcf.cloud.pcf.cloud/
+      http://student1-fortune-service.apps.pcf.cloud/
       ````
 
 ### Step 6
@@ -282,7 +282,7 @@ Lets walk through the code
       Get the route to your app
 
       ````
-    http://studentXXX-greeting-feign.apps.pcf.cloud.pcf.cloud/
+    http://studentXXX-greeting-feign.apps.pcf.cloud/
       ````
 
       <img src="/images/pcf-registry-example.png" alt="Service Registry Example" style="width: 100%;"/>
