@@ -99,11 +99,11 @@ Login to the App Console at https://apps.run.pcf.cloud
       <img src="/images/pcf-console-2.png" alt="Marketplace Services" style="width: 100%;"/>
 
 2. Select the default plan.
-3. Name the service instance as 'studentXX-circuit-breaker-dashboard'
+3. Name the service instance as 'studentXX-circuit-breaker'
 
       <img src="/images/circuit-breaker-2.png" alt="Circuit Breaker" style="width: 100%;"/>
 
-4. This will create the studentXX-circuit-breaker-dashboard service instance. To view the configuration of this service by clicking manage.
+4. This will create the studentXX-circuit-breaker service instance. To view the configuration of this service by clicking manage.
 
       <img src="/images/circuit-breaker-3.png" alt="Circuit Breaker" style="width: 100%;"/>
 
@@ -197,7 +197,7 @@ For more details, refer to the documentation of the Circuit Breaker configuratio
             host: <student-XX>-agency
             services:
               - <student-XX>-service-registry
-              - <student-XX>-circuit-breaker-dashboard
+              - <student-XX>-circuit-breaker
             path: ./build/libs/agency-0.0.1-SNAPSHOT.jar
             env:
               SPRING_PROFILES_ACTIVE: dev
@@ -219,7 +219,7 @@ For more details, refer to the documentation of the Circuit Breaker configuratio
 
       ````
       cf create-service p-service-registry standard service-registry
-      cf create-service p-circuit-breaker-dashboard standard circuit-breaker-dashboard
+      cf create-service p-circuit-breaker-dashboard standard circuit-breaker
       sleep 120
       pushd company && cf push -p build/libs/company-0.0.1-SNAPSHOT.jar
       popd; sleep 30
