@@ -123,7 +123,7 @@ github-branch: master
 cf-api: https://api.run.pcf.cloud
 cf-username: <student-XX>
 cf-password: <password>
-cf-org: ObjectPartners
+cf-org: West
 cf-space: student-XX
 cf-manifest-host: <student-XX>-flight-school-ci
 
@@ -258,13 +258,13 @@ $ fly -t gcp destroy-pipeline -p student-XX-flight-school // This will DELETE th
     ````
     GIT_REPO: git@github.com:<github-user>/pcf-ers-demo.git
     CF_API: https://api.run.pcf.cloud
-    CF_DEV_ORG: ObjectPartners
+    CF_DEV_ORG: West
     CF_DEV_SPACE: student-XX
-    CF_TEST_ORG: ObjectPartners
+    CF_TEST_ORG: West
     CF_TEST_SPACE: student-XX
-    CF_UAT_ORG: ObjectPartners
+    CF_UAT_ORG: West
     CF_UAT_SPACE: student-XX
-    CF_PROD_ORG: ObjectPartners
+    CF_PROD_ORG: West
     CF_PROD_SPACE: student-XX
     CF_USER: myuser
     CF_PASS: mypassword
