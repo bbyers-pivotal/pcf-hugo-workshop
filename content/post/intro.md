@@ -8,9 +8,9 @@ weight = 1
 +++
 
 ##### Date and Time
-Date: **February 7 2017**
+Date: **March 14 2017**
 
-Time: **12:00 PM - 3:00 PM**
+Time: **9:00 AM - 5:00 PM**
 
 Click to get the Agenda, Prerequisites and Setup for the workshop.
 
