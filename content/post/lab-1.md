@@ -31,7 +31,7 @@ Prerequisites
 
 5. Clone or Download the Source Code
 
-	[PCF Workspace:  https://github.com/Pivotal-Field-Engineering/pcf-workspace-devops/](https://github.com/Pivotal-Field-Engineering/pcf-workspace-devops/)
+	[PCF Workspace:  https://github.com/bbyers-pivotal/pcf-workspace-devops/](https://github.com/bbyers-pivotal/pcf-workspace-devops/)
 
 	##### Get the source code repository app
 
@@ -46,16 +46,16 @@ Prerequisites
 
 	Fork and Clone
 
-	[PCF Workspace:  https://github.com/Pivotal-Field-Engineering/pcf-workspace-devops/](https://github.com/Pivotal-Field-Engineering/pcf-workspace-devops/)
+	[PCF Workspace:  https://github.com/bbyers-pivotal/pcf-workspace-devops/](https://github.com/bbyers-pivotal/pcf-workspace-devops/)
 
 	For Linux/Mac:
 	```bash
-	$ git clone https://github.com/Pivotal-Field-Engineering/pcf-workspace-devops.git
+	$ git clone https://github.com/bbyers-pivotal/pcf-workspace-devops.git
 	```
 
 	For Windows
 	```
-	C:\<Some Directory to save code>\> git clone https://github.com/Pivotal-Field-Engineering/pcf-workspace-devops.git
+	C:\<Some Directory to save code>\> git clone https://github.com/bbyers-pivotal/pcf-workspace-devops.git
 	```
 
 5. Environment Proxy Setup (Optional depending on network configuration)
@@ -104,7 +104,7 @@ __NOTE__
 ***
 ### Step 1
 ##### Build the app
-By this point, you should have cloned (or forked, or downloaded) the [workspace repo](https://github.com/Pivotal-Field-Engineering/pcf-workspace-devops/).  Now you will build the project and deploy it to Cloud Foundry.
+By this point, you should have cloned (or forked, or downloaded) the [workspace repo](https://github.com/bbyers-pivotal/pcf-workspace-devops/).  Now you will build the project and deploy it to Cloud Foundry.
 
 For Linux/Mac:
 
