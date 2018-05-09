@@ -8,9 +8,9 @@ weight = 1
 +++
 
 ##### Date and Time
-Date: **March 14 2017**
+Date: **May 10 2018**
 
-Time: **9:00 AM - 5:00 PM**
+Time: **8:30 AM - 4:00 PM**
 
 Click to get the Agenda, Prerequisites and Setup for the workshop.
 
@@ -37,6 +37,7 @@ Click to get the Agenda, Prerequisites and Setup for the workshop.
 
 #### Speakers
 + Brian Byers - Platform Architect at Pivotal
++ Jenny McLaughlin - Platform Architect at Pivotal
 
 
 ---
@@ -62,12 +63,12 @@ Click to get the Agenda, Prerequisites and Setup for the workshop.
 
 2. Check if you are able to use the cf cli to connect your PCF  Environment.
 
-          cf login -a https://api.run.pcf.cloud  --skip-ssl-validation
+          cf login -a https://api.run.azure.pcf.cloud  --skip-ssl-validation
 
 3. Check if you are able to connect to Git repo and download / clone the repo using CLI
 4. Login to the App Manager Console at
 
-        https://apps.run.pcf.cloud
+        https://apps.run.azure.pcf.cloud
 
 
 

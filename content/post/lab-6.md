@@ -122,7 +122,7 @@ Be sure to point to the correct github-uri. The simplest uri to use is the same 
 ````
 github-uri: https://github.com/bbyers-pivotal/flight-school.git
 github-branch: master
-cf-api: https://api.run.pcf.cloud
+cf-api: https://api.run.azure.pcf.cloud
 cf-username: <student-XX>
 cf-password: <password>
 cf-org: West
@@ -259,7 +259,7 @@ $ fly -t gcp destroy-pipeline -p student-XX-flight-school // This will DELETE th
 
     ````
     GIT_REPO: git@github.com:<github-user>/pcf-ers-demo.git
-    CF_API: https://api.run.pcf.cloud
+    CF_API: https://api.run.azure.pcf.cloud
     CF_DEV_ORG: West
     CF_DEV_SPACE: student-XX
     CF_TEST_ORG: West
@@ -328,7 +328,7 @@ $ fly -t gcp destroy-pipeline -p student-XX-flight-school // This will DELETE th
     cf apps // Get the App Names and URL
     ````
 
-    Open a browser and check the app load. (https://student-XX-pcf-ers-demo-dev.apps.pcf.cloud)
+    Open a browser and check the app load. (https://student-XX-pcf-ers-demo-dev.apps.azure.pcf.cloud)
 
 
 

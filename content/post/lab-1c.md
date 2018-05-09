@@ -61,15 +61,15 @@ You can also use the Autoscaler service from the marketplace and bind it to your
 To verify that the application is running, use the following curl commands (or use your browser) to retrieve data from the service or use a browser to access the URL:
 
   ````bash
-  $ curl -i -k https://<YOUR INITIALS>-cities-service.apps.pcf.cloud/cities
+  $ curl -i -k https://<YOUR INITIALS>-cities-service.apps.azure.pcf.cloud/cities
   ````
 
   ````bash
-  $ curl -i -k https://<YOUR INITIALS>-cities-service.apps.pcf.cloud/cities/49
+  $ curl -i -k https://<YOUR INITIALS>-cities-service.apps.azure.pcf.cloud/cities/49
   ````
 
   ````bash
-  $ curl -i -k https://<YOUR INITIALS>-cities-service.apps.pcf.cloud/cities?size=5
+  $ curl -i -k https://<YOUR INITIALS>-cities-service.apps.azure.pcf.cloud/cities?size=5
   ````
 
   For Windows, use your browser and visit the corresponding URLs.

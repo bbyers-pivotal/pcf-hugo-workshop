@@ -22,5 +22,5 @@ deploy:
         skip_ssl: true
         appname: pcf-workshop-blue
         alt_appname: pcf-workshop-green
-        domain: apps.pcf.cloud
+        domain: apps.azure.pcf.cloud
         hostname: pcf-workshop

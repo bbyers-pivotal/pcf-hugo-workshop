@@ -126,12 +126,12 @@ Windows:
 Each participant will have their own user ids and passwords.  
 
 ````
-cf login -a https://api.run.pcf.cloud --skip-ssl-validation
+cf login -a https://api.run.azure.pcf.cloud --skip-ssl-validation
   Email: student-x
   Password: ••••••••
 ````
 
-Login to the App Console at https://apps.run.pcf.cloud
+Login to the App Console at https://apps.run.azure.pcf.cloud
 
 <img src="/images/pcf-console.png" alt="PCF App Console" style="width: 70%;"/>
 
@@ -149,7 +149,7 @@ Login to the App Console at https://apps.run.pcf.cloud
     requested state: started
     instances: 1/1
     usage: 1G x 1 instances
-    urls: cities-hello-lactiferous-unanswerableness.apps.pcf.cloud
+    urls: cities-hello-lactiferous-unanswerableness.apps.azure.pcf.cloud
     last uploaded: Mon Jun 15 14:53:10 UTC 2017
     stack: cflinuxfs2
     ```
@@ -160,7 +160,7 @@ Login to the App Console at https://apps.run.pcf.cloud
 
 3. If you haven't already it is a good time to walk through the AppsManager:
 
-        https://apps.run.pcf.cloud
+        https://apps.run.azure.pcf.cloud
 
 4. When you are finished, let's delete the application we just created. In the next labs we will be pushing a diferent application
 

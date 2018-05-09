@@ -81,12 +81,12 @@ The participants have userId's and the passwords will be distributed prior to th
 
 
     ````
-    cf login -a https://api.run.pcf.cloud --skip-ssl-validation
+    cf login -a https://api.run.azure.pcf.cloud --skip-ssl-validation
     Email: student-x
     Password: ••••••••
     ````
 
-Login to the App Console at https://apps.run.pcf.cloud
+Login to the App Console at https://apps.run.azure.pcf.cloud
 
     <img src="/images/pcf-console.png" alt="PCF App Console" style="width: 100%;"/>
 
@@ -287,7 +287,7 @@ Let's walk through the code in the greeting-config app in the source repo (Step 
       greeting:
         displayFortune: true # <----Change to true
 
-      quoteServiceURL: http://quote-service-dev.apps.pcf.cloud/quote
+      quoteServiceURL: http://quote-service-dev.apps.azure.pcf.cloud/quote
       ````
 
 
@@ -308,7 +308,7 @@ Let's walk through the code in the greeting-config app in the source repo (Step 
             - <student-XX>-config-server
           env:
             SPRING_PROFILES_ACTIVE: dev
-            TRUST_CERTS: api.run.pcf.cloud
+            TRUST_CERTS: api.run.azure.pcf.cloud
 
 
 2. Build the app using gradle
@@ -326,8 +326,8 @@ Let's walk through the code in the greeting-config app in the source repo (Step 
 4. Open in the browser the App
 
       ````
-      http://<student-XX>-greeting-config.apps.pcf.cloud/
-      http://<student-XX>-greeting-config.apps.pcf.cloud/random-quote
+      http://<student-XX>-greeting-config.apps.azure.pcf.cloud/
+      http://<student-XX>-greeting-config.apps.azure.pcf.cloud/random-quote
       ````
 
 ### Step 7
@@ -339,13 +339,13 @@ Let's walk through the code in the greeting-config app in the source repo (Step 
       greeting:
         displayFortune: false # <----Change to true
 
-      quoteServiceURL: http://quote-service-qa.apps.pcf.cloud/quote
+      quoteServiceURL: http://quote-service-qa.apps.azure.pcf.cloud/quote
       ````
 
 2. Force refresh the beans
 
       ````
-      curl -X POST http://<student-XX>-greeting-config.apps.pcf.cloud/refresh
+      curl -X POST http://<student-XX>-greeting-config.apps.azure.pcf.cloud/refresh
       ````
 
       This will output the properties which changed
@@ -357,8 +357,8 @@ Let's walk through the code in the greeting-config app in the source repo (Step 
 
       You will see the Greetings doesn't have any fortune and the random-quote is from qa service
 
-        http://<student-XX>-greeting-config.apps.pcf.cloud/
-        http://<student-XX>-greeting-config.apps.pcf.cloud/random-quote
+        http://<student-XX>-greeting-config.apps.azure.pcf.cloud/
+        http://<student-XX>-greeting-config.apps.azure.pcf.cloud/random-quote
 
 
 ### Step 8
@@ -390,8 +390,8 @@ Let's walk through the code in the greeting-config app in the source repo (Step 
 
       You can verify by opening the two URLs
 
-        http://<student-XX>-greeting-config.apps.pcf.cloud/
-        http://<student-XX>-greeting-config.apps.pcf.cloud/random-quote
+        http://<student-XX>-greeting-config.apps.azure.pcf.cloud/
+        http://<student-XX>-greeting-config.apps.azure.pcf.cloud/random-quote
 
 
 ### Step 9
@@ -430,44 +430,44 @@ Spring Cloud Bus addresses the issues listed above by providing a single endpoin
 4. Change the app-config/greeting-config.yml and refresh all the app instances using Cloud Bus
 
       ````
-      curl -X POST http://<studentXXX>-greeting-config.apps.pcf.cloud/bus/refresh
+      curl -X POST http://<studentXXX>-greeting-config.apps.azure.pcf.cloud/bus/refresh
       ````
 
 5. Verify by opening the two URLs
 
-        http://<studentXXX>-greeting-config.apps.pcf.cloud/
-        http://<studentXXX>-greeting-config.apps.pcf.cloud/random-quote
+        http://<studentXXX>-greeting-config.apps.azure.pcf.cloud/
+        http://<studentXXX>-greeting-config.apps.azure.pcf.cloud/random-quote
 
 ### Step 10
 ##### Spring Actuator Endpoints
 
 Check the Actuator Endpoints
 
-``http://<YOUR INITIALS>-greeting-config.apps.pcf.cloud/beans``
+``http://<YOUR INITIALS>-greeting-config.apps.azure.pcf.cloud/beans``
 
 Dumps all of the beans in the Spring context.
 
-``http://<YOUR INITIALS>-greeting-config.apps.pcf.cloud/autoconfig``
+``http://<YOUR INITIALS>-greeting-config.apps.azure.pcf.cloud/autoconfig``
 
 Dumps all of the auto-configuration performed as part of application bootstrapping.
 
-``http://<YOUR INITIALS>-greeting-config.apps.pcf.cloud/configprops``
+``http://<YOUR INITIALS>-greeting-config.apps.azure.pcf.cloud/configprops``
 
 Displays a collated list of all @ConfigurationProperties.
 
-``http://<YOUR INITIALS>-greeting-config.apps.pcf.cloud/env``
+``http://<YOUR INITIALS>-greeting-config.apps.azure.pcf.cloud/env``
 
 Dumps the application’s shell environment as well as all Java system properties.
 
-``http://<YOUR INITIALS>-greeting-config.apps.pcf.cloud/mappings``
+``http://<YOUR INITIALS>-greeting-config.apps.azure.pcf.cloud/mappings``
 
 Dumps all URI request mappings and the controller methods to which they are mapped.
 
-``http://<YOUR INITIALS>-greeting-config.apps.pcf.cloud/dump``
+``http://<YOUR INITIALS>-greeting-config.apps.azure.pcf.cloud/dump``
 
 Performs a thread dump.
 
-``http://<YOUR INITIALS>-greeting-config.apps.pcf.cloud/trace``
+``http://<YOUR INITIALS>-greeting-config.apps.azure.pcf.cloud/trace``
 
 # Advanced Topics
 
@@ -488,10 +488,10 @@ And to get the encrypted values, first get the OAuth TOKEN_STRING
           "p-config-server": [
            {
             "credentials": {
-             "access_token_uri": "https://p-spring-cloud-services.uaa.run.pcf.cloud/oauth/token",
+             "access_token_uri": "https://p-spring-cloud-services.uaa.run.azure.pcf.cloud/oauth/token",
              "client_id": "p-config-server-876cd13b-1564-4a9a-9d44-c7c8a6257b73",
              "client_secret": "rU7dMUw6bQjR",
-             "uri": "https://config-86b38ce0-eed8-4c01-adb4-1a651a6178e2.apps.pcf.cloud"
+             "uri": "https://config-86b38ce0-eed8-4c01-adb4-1a651a6178e2.apps.azure.pcf.cloud"
             },
         [...]
 
