@@ -1,4 +1,4 @@
-baseurl = "http://pcf-workshop.apps.azure.pcf.cloud"
+baseurl = "http://pcf-workshop.apps.pcf.cloud"
 languageCode = "en-us"
 title = "Cloud Foundry Workshop"
 
