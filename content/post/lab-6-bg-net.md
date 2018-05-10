@@ -1,9 +1,9 @@
 +++
 
 Categories = ["lab"]
-Tags = ["blue-green","microservices","cloudfoundry"]
-date = "2017-11-29T07:49:11-04:00"
-title = "Lab 6: Blue Green Deployments - Java"
+Tags = ["blue-green","microservices","cloudfoundry","dotnet"]
+date = "2017-08-29T07:49:11-04:00"
+title = "Lab 6: Dot Net Blue Green Deployments"
 weight = 6
 
 +++
@@ -34,74 +34,82 @@ In this lab we are going to do a green-blue deployment using cf commands. We'll 
   <img src="/images/blue-green-process.png" alt="Blue Green Deployment Process" style="width: 100%;"/>
 
 
-There are three different options in this lab to do blue-green deployment. You can pick any of them.
+There are three different options in this lab to do blue-green deployment. We'll walk through the first one and talk about the other optons.
 
 ##### Option 1
 
 First push a new version of the app with a blue route.
 
-    $ cd cities-hello
+    $ cd pcf-dotnet-environment-viewer/ViewEnvironment
     // Push the app version v1 with the hostname as blue
-    $ cf push <YOUR INITIALS>-cities-hello-v1 --hostname <YOUR INITIALS>-cities-hello-blue -f manifest.hello
+    $ cf push <YOUR INITIALS>-env-v1 --hostname <YOUR INITIALS>-env-blue -f manifest.yml
     // Map your outside route to this blue version
-    $ cf map-route <YOUR INITIALS>-cities-hello-v1 apps.azure.pcf.cloud --hostname <YOUR INITIALS>-cities-hello
+    $ cf map-route <YOUR INITIALS>-env-v1 app.cloud.rick-ross.com --hostname <YOUR INITIALS>-env
     $ cf apps // Check the apps and the routes
 
 Next, you can push a new version of the app with a green route.
 
     // Push the app version v2 with the hostname as green
-    $ cf push <YOUR INITIALS>-cities-hello-v2 --hostname <YOUR INITIALS>-cities-hello-green -f manifest.yml
-    // Map the outside route to this green version. Now your outside route is mapped to both blue and green
-    $ cf map-route <YOUR INITIALS>-cities-hello-v2 apps.azure.pcf.cloud --hostname <YOUR INITIALS>-cities-hello
+    $ cf push <YOUR INITIALS>-env-v2 --hostname <YOUR INITIALS>-env-green -f manifest.yml
+    // Map the outside route to this green version. Now your outside route is mapped to both bluae and green
+    $ cf map-route <YOUR INITIALS>-env-v2 app.cloud.rick-ross.com --hostname <YOUR INITIALS>-env
     // Unmap the outside route to the blue version. All the traffic is now directed to v2
-    $ cf unmap-route <YOUR INITIALS>-cities-hello-v1 apps.azure.pcf.cloud --hostname <YOUR INITIALS>-cities-hello
+    $ cf unmap-route <YOUR INITIALS>-env-v1 app.cloud.rick-ross.com --hostname <YOUR INITIALS>-env
 
 
 ##### Option 2
 
 Cloud Foundry plugin [Autopilot](https://github.com/concourse/autopilot) does blue green deployment, albeit it takes a different approach to other zero-downtime plugins. It does not perform any complex route re-mappings instead it leans on the manifest feature of the Cloud Foundry CLI. The method also has the advantage of treating a manifest as the source of truth and will converge the state of the system towards that. This makes the plugin ideal for continuous delivery environments.
 
-Download the latest release of the autopilot plugin from the github releases page and save it in pcf-workspace-devops folder
- (https://github.com/contraband/autopilot/releases)
+You can download the latest release of the autopilot plugin from the github releases page [here](https://github.com/contraband/autopilot/releases)
 
-  On a Mac
-  ````bash
-  $ cd pcf-workspace-devops // This is the folder where you have saved the autopilot plugin
-  $ cf install-plugin autopilot
-  ````
+To install the plugin you run the following command from the location that you saved the autoplugin.
 
-  On Windows:
+   ```bash
+   cf install-plugin autopilot
+   ```
 
-    cd pcf-workspace-devops // This is the folder where you have saved the autopilot plugin
-    cf install-plugin autopilot.exe
+Once the plugin is installed ...
 
-  Once the plugin is installed ...
+   ```bash
+   $ cd pcf-dotnet-environment-viewer/ViewEnvironment
+   // Append the build number to the app Name
+   $ nano manifest.yml // Change the app name and append the build number, on Windows use wordpad manifest.yml
+   ```
 
-    $ cd cities-hello (on Windows cd cities-hello)
-    // Append the build number to the app Name
-    $ nano manifest.hello // Change the app name and append the build number, on Windows use wordpad manifest.hello
+The contents of the manifest should look like this
 
-<img src="/images/pcf-blue-green-b100.png" alt="Blue Green Deployment Build" style="width: 50%;"/>
+   ```bash
+   ---
+   applications:
+   - name: <YOUR INITIALS>-env-b100
+     memory: 512m
+     stack: windows2012R2
+     buildpack: hwc_buildpack
+   ```
 
-    $ cf zero-downtime-push <YOUR INITIALS>-cities-hello -f manifest.hello
+   ```bash
+   $ cf zero-downtime-push <YOUR INITIALS>-cities-hello -f manifest.hello
+   ```
 
 ##### Option 3 (This is as bash script and works only on Linux/OSX)
 
 If you would like to inject build numbers in your app names here is a script you could use to do blue green deployments in the cities-hello directory which only works on a Mac
 
+   ```bash
     Usage: blue-green.sh <app-name> <build-number> <domain>
-
+   ```
 
   ````bash
 
-  $ ./blue-green.sh  cities-hello 1001 <YOUR INITIALS>
+  $ ./blue-green.sh  <YOUR INTIALS>-env 1001 <YOUR INITIALS>
   $ cf apps // You should see your app build 1001 and the Route
   ````
 
   Now push the new build 1002 of the app
 
   ````bash
-  $ ./blue-green.sh  cities-hello 1002 example.com
+  $ ./blue-green.sh  <YOUR INITIALS>-cities-hello 1002 example.com
   $ cf apps // You should see your app build 1002 and the same route mapped to the new build
 
   ````

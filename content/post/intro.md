@@ -10,7 +10,7 @@ weight = 1
 ##### Date and Time
 Date: **May 10 2018**
 
-Time: **8:30 AM - 4:00 PM**
+Time: **9:30 AM - 4:00 PM**
 
 Click to get the Agenda, Prerequisites and Setup for the workshop.
 
