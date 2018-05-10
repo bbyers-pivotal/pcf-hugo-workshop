@@ -3,8 +3,8 @@
 Categories = ["lab"]
 Tags = ["dotnet","microservices","cloudfoundry","steeltoe"]
 date = "2017-08-29T07:49:11-04:00"
-title = "Lab: Steeltoe Config Server"
-weight = 70
+title = "Lab 8: Steeltoe Config Server"
+weight = 8
 
 +++
 
