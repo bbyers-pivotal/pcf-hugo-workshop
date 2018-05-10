@@ -44,7 +44,7 @@ First push a new version of the app with a blue route.
     // Push the app version v1 with the hostname as blue
     $ cf push <YOUR INITIALS>-env-v1 --hostname <YOUR INITIALS>-env-blue -f manifest.yml
     // Map your outside route to this blue version
-    $ cf map-route <YOUR INITIALS>-env-v1 app.cloud.rick-ross.com --hostname <YOUR INITIALS>-env
+    $ cf map-route <YOUR INITIALS>-env-v1 apps.run.azure.pcf.cloud --hostname <YOUR INITIALS>-env
     $ cf apps // Check the apps and the routes
 
 Next, you can push a new version of the app with a green route.
@@ -52,9 +52,9 @@ Next, you can push a new version of the app with a green route.
     // Push the app version v2 with the hostname as green
     $ cf push <YOUR INITIALS>-env-v2 --hostname <YOUR INITIALS>-env-green -f manifest.yml
     // Map the outside route to this green version. Now your outside route is mapped to both bluae and green
-    $ cf map-route <YOUR INITIALS>-env-v2 app.cloud.rick-ross.com --hostname <YOUR INITIALS>-env
+    $ cf map-route <YOUR INITIALS>-env-v2 apps.run.azure.pcf.cloud --hostname <YOUR INITIALS>-env
     // Unmap the outside route to the blue version. All the traffic is now directed to v2
-    $ cf unmap-route <YOUR INITIALS>-env-v1 app.cloud.rick-ross.com --hostname <YOUR INITIALS>-env
+    $ cf unmap-route <YOUR INITIALS>-env-v1 apps.run.azure.pcf.cloud --hostname <YOUR INITIALS>-env
 
 
 ##### Option 2

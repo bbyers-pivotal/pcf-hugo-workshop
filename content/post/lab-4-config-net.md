@@ -101,7 +101,7 @@ Windows:
 Each participant will have their own user ids and passwords.  
 
   ````
-  cf login -a https://api.sys.cloud.rick-ross.com --skip-ssl-validation
+  cf login -a https://api.run.azure.pcf.cloud --skip-ssl-validation
   Email: myuserid
   Password: ••••••••
 
@@ -114,7 +114,7 @@ Each participant will have their own user ids and passwords.
 
    ````
 
-Login to the App Console at https://app.cloud.rick-ross.com
+Login to the App Console at https://apps.run.azure.pcf.cloud
 
    <img src="/images/pcf-console.png" alt="PCF App Console" style="width: 70%;"/>
 
@@ -200,7 +200,7 @@ Which will result in output of
    requested state: started
    instances: 1/1
    usage: 1G x 1 instances
-   urls: rr-configapp.app.cloud.rick-ross.com
+   urls: rr-configapp.apps.run.azure.pcf.cloud
    last uploaded: Sun Sep 3 21:16:55 UTC 2017
    stack: cflinuxfs2
    buildpack: ASP.NET Core (buildpack-1.0.25)

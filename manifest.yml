@@ -3,6 +3,5 @@ applications:
 - name: pcf-objectpartners-workshop
   memory: 64M
   instances: 1
-  # domain: app.cloud.rick-ross.com
   path: public
   buildpack: staticfile_buildpack

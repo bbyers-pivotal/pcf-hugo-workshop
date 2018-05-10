@@ -101,7 +101,7 @@ Windows:
 Each participant will have their own user ids and passwords.  
 
   ````
-  cf login -a https://api.sys.cloud.rick-ross.com --skip-ssl-validation
+  cf login -a https://api.run.azure.pcf.cloud --skip-ssl-validation
   Email: myuserid
   Password: ••••••••
 
@@ -114,7 +114,7 @@ Each participant will have their own user ids and passwords.
 
    ````
 
-Login to the App Console at https://app.cloud.rick-ross.com
+Login to the App Console at https://apps.run.azure.pcf.cloud
 
    <img src="/images/pcf-console.png" alt="PCF App Console" style="width: 70%;"/>
 
@@ -150,7 +150,7 @@ Which will result in output of
    requested state: started
    instances: 1/1
    usage: 1G x 1 instances
-   urls: fortuneservice.app.cloud.rick-ross.com
+   urls: fortuneservice.apps.run.azure.pcf.cloud
    last uploaded: Tue Sep 5 23:38:58 UTC 2017
    stack: cflinuxfs2
    buildpack: ASP.NET Core (buildpack-1.0.25)
@@ -159,7 +159,7 @@ Which will result in output of
 ### Step 5
 ##### Visit the Applicaiton in the Browser
 
-Open a browser and visit the /api/fortunes/random endpoint. For my service, this is http://fortuneservice.app.cloud.rick-ross.com/api/fortunes/random. Yours will be different.
+Open a browser and visit the /api/fortunes/random endpoint. For my service, this is http://fortuneservice.apps.run.azure.pcf.cloud/api/fortunes/random. Yours will be different.
 
 <img src="/images/plain-fortune-service.png" alt="Git style="width: 40%;"/>
 
@@ -196,7 +196,7 @@ Let's create a User Provided Service that will point to our Fortune Teller Servi
    uri>
    ```
 
-When prompted to enter the uri, enter in your URL of where your application lives. In my case, it is located here: http://fortuneservice.app.cloud.rick-ross.com/
+When prompted to enter the uri, enter in your URL of where your application lives. In my case, it is located here: http://fortuneservice.apps.run.azure.pcf.cloud/
 
 If you want to double check your work, bring up Apps Manager, navigate to your org and space and look at the service you created.
 
@@ -249,7 +249,7 @@ Which will result in output of
    requested state: started
    instances: 1/1
    usage: 1G x 1 instances
-   urls: fortuneui.app.cloud.rick-ross.com
+   urls: fortuneui.apps.run.azure.pcf.cloud
    last uploaded: Mon Sep 4 00:21:40 UTC 2017
    stack: cflinuxfs2
    buildpack: ASP.NET Core (buildpack-1.0.25)
