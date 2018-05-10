@@ -161,7 +161,7 @@ Push the PCF DotNet Environment Viewer
   usage: 512M x 1 instances
   urls: env-noninductive-nursling.apps.run.azure.pcf.cloud
   last uploaded: Thu Aug 31 19:41:33 UTC 2017
-  stack: windows2012R2
+  stack: windows2016
   buildpack: hwc_buildpack
   ```
 

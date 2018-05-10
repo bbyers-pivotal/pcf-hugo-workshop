@@ -84,7 +84,7 @@ The contents of the manifest should look like this
    applications:
    - name: <YOUR INITIALS>-env-b100
      memory: 512m
-     stack: windows2012R2
+     stack: windows2016
      buildpack: hwc_buildpack
    ```
 
