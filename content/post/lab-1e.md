@@ -44,7 +44,7 @@ First push a new version of the app with a blue route.
     // Push the app version v1 with the hostname as blue
     $ cf push <YOUR INITIALS>-cities-hello-v1 --hostname <YOUR INITIALS>-cities-hello-blue -f manifest.hello
     // Map your outside route to this blue version
-    $ cf map-route <YOUR INITIALS>-cities-hello-v1 apps.azure.pcf.cloud --hostname <YOUR INITIALS>-cities-hello
+    $ cf map-route <YOUR INITIALS>-cities-hello-v1 apps.pcf.cloud --hostname <YOUR INITIALS>-cities-hello
     $ cf apps // Check the apps and the routes
 
 Next, you can push a new version of the app with a green route.
@@ -52,9 +52,9 @@ Next, you can push a new version of the app with a green route.
     // Push the app version v2 with the hostname as green
     $ cf push <YOUR INITIALS>-cities-hello-v2 --hostname <YOUR INITIALS>-cities-hello-green -f manifest.yml
     // Map the outside route to this green version. Now your outside route is mapped to both blue and green
-    $ cf map-route <YOUR INITIALS>-cities-hello-v2 apps.azure.pcf.cloud --hostname <YOUR INITIALS>-cities-hello
+    $ cf map-route <YOUR INITIALS>-cities-hello-v2 apps.pcf.cloud --hostname <YOUR INITIALS>-cities-hello
     // Unmap the outside route to the blue version. All the traffic is now directed to v2
-    $ cf unmap-route <YOUR INITIALS>-cities-hello-v1 apps.azure.pcf.cloud --hostname <YOUR INITIALS>-cities-hello
+    $ cf unmap-route <YOUR INITIALS>-cities-hello-v1 apps.pcf.cloud --hostname <YOUR INITIALS>-cities-hello
 
 
 ##### Option 2

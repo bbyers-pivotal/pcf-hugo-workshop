@@ -34,7 +34,7 @@ In ths Lab you will bind your previous .NET applications to a MySQL database. Yo
 
 2. Create a mysql service, name it as `<YOUR INITIALS>-env-db`
 
-    You can create the service from the `cli` or launch the App Manager-> Select the Development Space [https://apps.run.azure.pcf.cloud](https://apps.run.azure.pcf.cloud) and login.
+    You can create the service from the `cli` or launch the App Manager-> Select the Development Space [https://apps.run.pcf.cloud](https://apps.run.pcf.cloud) and login.
     Navigate to the marketplace and see the available services.
 
     <img src="/images/pcf-marketplace.png" alt="Marketplace Services" style="width: 70%;"/>

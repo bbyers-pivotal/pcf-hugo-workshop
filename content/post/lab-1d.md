@@ -51,7 +51,7 @@ In this section we will create a backend microservice end point for cities-servi
 
   $ cf create-user-provided-service <YOUR INITIALS>-cities-ws -p "citiesuri"
 
-  citiesuri>   http://<YOUR INIITALS>-cities-service.apps.azure.pcf.cloud/
+  citiesuri>   http://<YOUR INIITALS>-cities-service.apps.pcf.cloud/
 
   Creating user provided service....
   ````
@@ -101,7 +101,7 @@ System-Provided:
    {
     "credentials": {
      "tag": "cities",
-     "uri": "https://bb-cities-service.apps.azure.pcf.cloud/"
+     "uri": "https://bb-cities-service.apps.pcf.cloud/"
     },
     "label": "user-provided",
     "name": "cities-ws",
@@ -116,7 +116,7 @@ System-Provided:
  "VCAP_APPLICATION": {
   "application_name": "bb-cities-ui",
   "application_uris": [
-   "bb-cities-ui.apps.azure.pcf.cloud"
+   "bb-cities-ui.apps.pcf.cloud"
   ],
   "application_version": "dceb111b-3a68-45ad-83fd-3b8b836ebbe7",
   "limits": {
@@ -128,7 +128,7 @@ System-Provided:
   "space_id": "56e1d8ef-e87f-4b1c-930b-e7f46c00e483",
   "space_name": "development",
   "uris": [
-   "bb-cities-ui.apps.azure.pcf.cloud"
+   "bb-cities-ui.apps.pcf.cloud"
   ],
   "users": null,
   "version": "dceb111b-3a68-45ad-83fd-3b8b836ebbe7"

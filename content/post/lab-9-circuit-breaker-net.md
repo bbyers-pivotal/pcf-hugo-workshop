@@ -105,7 +105,7 @@ Windows:
 Each participant will have their own user ids and passwords.  
 
   ````
-  cf login -a https://api.run.azure.pcf.cloud --skip-ssl-validation
+  cf login -a https://api.run.pcf.cloud --skip-ssl-validation
   Email: myuserid
   Password: ••••••••
 
@@ -118,7 +118,7 @@ Each participant will have their own user ids and passwords.
 
    ````
 
-Login to the App Console at https://apps.run.azure.pcf.cloud
+Login to the App Console at https://apps.run.pcf.cloud
 
    <img src="/images/pcf-console.png" alt="PCF App Console" style="width: 70%;"/>
 
@@ -206,7 +206,7 @@ Which will result in output of
    requested state: started
    instances: 1/1
    usage: 1G x 1 instances
-   urls: fortuneservice.apps.run.azure.pcf.cloud
+   urls: fortuneservice.apps.run.pcf.cloud
    last uploaded: Sun Sep 3 23:58:01 UTC 2017
    stack: cflinuxfs2
    buildpack: ASP.NET Core (buildpack-1.0.25)
@@ -227,13 +227,13 @@ The output should look similar to this:
 
 ```
    2017-09-03T19:58:38.68-0400 [APP/PROC/WEB/0] OUT dbug: Steeltoe.Discovery.Eureka.Transport.EurekaHttpClient[0]
-   2017-09-03T19:58:38.68-0400 [APP/PROC/WEB/0] OUT       RegisterAsync https://eureka-0513a977-f47b-4862-aa30-75b51c3914d9.apps.run.azure.pcf.cloud/eureka/apps/FORTUNESERVICE, status: NoContent
+   2017-09-03T19:58:38.68-0400 [APP/PROC/WEB/0] OUT       RegisterAsync https://eureka-0513a977-f47b-4862-aa30-75b51c3914d9.apps.run.pcf.cloud/eureka/apps/FORTUNESERVICE, status: NoContent
    2017-09-03T19:58:38.68-0400 [APP/PROC/WEB/0] OUT dbug: Steeltoe.Discovery.Eureka.Transport.EurekaHttpClient[0]
-   2017-09-03T19:58:38.68-0400 [APP/PROC/WEB/0] OUT       RegisterAsync https://eureka-0513a977-f47b-4862-aa30-75b51c3914d9.apps.run.azure.pcf.cloud/eureka/apps/FORTUNESERVICE, status: NoContent
+   2017-09-03T19:58:38.68-0400 [APP/PROC/WEB/0] OUT       RegisterAsync https://eureka-0513a977-f47b-4862-aa30-75b51c3914d9.apps.run.pcf.cloud/eureka/apps/FORTUNESERVICE, status: NoContent
    2017-09-03T19:58:38.68-0400 [APP/PROC/WEB/0] OUT dbug: Steeltoe.Discovery.Eureka.DiscoveryClient[0]
-   2017-09-03T19:58:38.68-0400 [APP/PROC/WEB/0] OUT       Register FORTUNESERVICE/fortuneservice.apps.run.azure.pcf.cloud:c29738be-8cea-438d-78f2-db28 returned: NoContent
+   2017-09-03T19:58:38.68-0400 [APP/PROC/WEB/0] OUT       Register FORTUNESERVICE/fortuneservice.apps.run.pcf.cloud:c29738be-8cea-438d-78f2-db28 returned: NoContent
    2017-09-03T19:58:38.68-0400 [APP/PROC/WEB/0] OUT dbug: Steeltoe.Discovery.Eureka.DiscoveryClient[0]
-   2017-09-03T19:58:38.68-0400 [APP/PROC/WEB/0] OUT       Register FORTUNESERVICE/fortuneservice.apps.run.azure.pcf.cloud:c29738be-8cea-438d-78f2-db28 returned: NoContent
+   2017-09-03T19:58:38.68-0400 [APP/PROC/WEB/0] OUT       Register FORTUNESERVICE/fortuneservice.apps.run.pcf.cloud:c29738be-8cea-438d-78f2-db28 returned: NoContent
    2017-09-03T19:58:39.12-0400 [APP/PROC/WEB/0] OUT info: Microsoft.EntityFrameworkCore.Storage.Internal.InMemoryDatabase[1]
    2017-09-03T19:58:39.12-0400 [APP/PROC/WEB/0] OUT       Saved 50 entities to in-memory store.
    2017-09-03T19:58:39.12-0400 [APP/PROC/WEB/0] OUT info: Microsoft.EntityFrameworkCore.Storage.Internal.InMemoryDatabase[1]
@@ -252,7 +252,7 @@ Periodically you will see logs that show the Discovery Server ensuring that the 
 
 ```
    2017-09-03T19:59:08.86-0400 [APP/PROC/WEB/0] OUT dbug: Steeltoe.Discovery.Eureka.DiscoveryClient[0]
-   2017-09-03T19:59:08.86-0400 [APP/PROC/WEB/0] OUT       Renew FORTUNESERVICE/fortuneservice.apps.run.azure.pcf.cloud:c29738be-8cea-438d-78f2-db28 returned: OK
+   2017-09-03T19:59:08.86-0400 [APP/PROC/WEB/0] OUT       Renew FORTUNESERVICE/fortuneservice.apps.run.pcf.cloud:c29738be-8cea-438d-78f2-db28 returned: OK
 ```
 
 ## Deploying the Fortune Teller UI Application
@@ -361,7 +361,7 @@ Which will result in output of
    requested state: started
    instances: 1/1
    usage: 1G x 1 instances
-   urls: fortuneui.apps.run.azure.pcf.cloud
+   urls: fortuneui.apps.run.pcf.cloud
    last uploaded: Mon Sep 4 00:21:40 UTC 2017
    stack: cflinuxfs2
    buildpack: ASP.NET Core (buildpack-1.0.25)
@@ -400,7 +400,7 @@ Open the application URL in a browser. You will see something similar to this:
 
 <img src="/images/fortune-ui.png" alt="PCF App Console" style="width: 70%;"/>
 
-You can also tack on multiple at the end of the URL to have it return three Fortunes at once. In my case the full url would be this: [https://fortuneui.apps.run.azure.pcf.cloud/#/multiple](https://fortuneui.apps.run.azure.pcf.cloud/#/multiple)
+You can also tack on multiple at the end of the URL to have it return three Fortunes at once. In my case the full url would be this: [https://fortuneui.apps.run.pcf.cloud/#/multiple](https://fortuneui.apps.run.pcf.cloud/#/multiple)
 
 ### Step 9
 ##### Interact with the Hystrix Dashboard in Pivotal Cloud Foundry

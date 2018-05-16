@@ -131,7 +131,7 @@ Windows:
 Each participant will have their own user ids and passwords.  
 
   ```bash
-  $ cf login -a https://api.run.azure.pcf.cloud --skip-ssl-validation
+  $ cf login -a https://api.run.pcf.cloud --skip-ssl-validation
   Email: myuserid
   Password: ••••••••
 
@@ -143,7 +143,7 @@ Each participant will have their own user ids and passwords.
   Select any one and stick to that space for the rest of the workshop.
   ```
 
-Login to the App Console at https://apps.run.azure.pcf.cloud
+Login to the App Console at https://apps.run.pcf.cloud
 
 <img src="/images/pcf-console.png" alt="PCF App Console" style="width: 70%;"/>
 
@@ -159,7 +159,7 @@ Push the PCF DotNet Environment Viewer
   requested state: started
   instances: 1/1
   usage: 512M x 1 instances
-  urls: env-noninductive-nursling.apps.run.azure.pcf.cloud
+  urls: env-noninductive-nursling.apps.run.pcf.cloud
   last uploaded: Thu Aug 31 19:41:33 UTC 2017
   stack: windows2016
   buildpack: hwc_buildpack
@@ -187,7 +187,7 @@ By this point, you should have cloned (or forked, or downloaded) the [Dot Net Co
     requested state: started
     instances: 1/1
     usage: 1G x 1 instances
-    urls: dotnetcore-rootless-eeriness.apps.run.azure.pcf.cloud
+    urls: dotnetcore-rootless-eeriness.apps.run.pcf.cloud
     last uploaded: Sat Sep 2 17:46:35 UTC 2017
     stack: cflinuxfs2
     buildpack: ASP.NET Core (buildpack-1.0.25)
