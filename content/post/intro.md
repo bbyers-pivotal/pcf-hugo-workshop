@@ -2,15 +2,15 @@
 Categories = ["agenda","workshop"]
 Tags = ["logistics","speakers"]
 date = "2017-11-29T07:44:03+04:00"
-title = "Welcome to the Pivotal Cloud Foundry Primer @ West Corp"
+title = "Welcome to the Pivotal Cloud Foundry Primer"
 type = "Introduction"
 weight = 1
 +++
 
 ##### Date and Time
-Date: **May 10 2018**
+Date: **TBD**
 
-Time: **9:30 AM - 4:00 PM**
+Time: **TBD**
 
 Click to get the Agenda, Prerequisites and Setup for the workshop.
 
@@ -37,7 +37,6 @@ Click to get the Agenda, Prerequisites and Setup for the workshop.
 
 #### Speakers
 + Brian Byers - Platform Architect at Pivotal
-+ Jenny McLaughlin - Platform Architect at Pivotal
 
 
 ---
